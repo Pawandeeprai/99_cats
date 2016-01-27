@@ -1,0 +1,7 @@
+<h1>Mein Katzen Requesto</h1>
+
+<ul>
+<% @requests.each do |request| %>
+   <li><%= request.to_json %></li>
+<% end %>
+</ul>

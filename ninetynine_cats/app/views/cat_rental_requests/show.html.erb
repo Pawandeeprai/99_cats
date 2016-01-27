@@ -1,0 +1,16 @@
+
+<h1><%= @request.id %> </h1>
+<table>
+  <tr>
+    <td>cat:</td>  <td><%= @cat.to_json %></td>
+  </tr>
+  <tr>
+    <td>request:</td> <td><%= @request.to_json %></td>
+  </tr>
+</table>
+
+
+  <%= button_to "Approve", cat_rental_request_approve_url(@request), method: :patch %>
+  <!--  ^^ do these work? vv -->
+  <!-- 1. how to call model methods; 2. how to route correctly -->
+  <%= button_to "Deny", cat_rental_request_deny_url(@request), method: :patch %>
